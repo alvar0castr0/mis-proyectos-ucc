@@ -3,13 +3,14 @@ using namespace std;
 
 int cifras (int numero)
 {
-    int cifra, digito;
-    cifra = 0;
+    int digito, s;
+    s = 0;
     while (numero != 0) {
-    int digito = numero % 10;
-    cifra = cifra * 10 + digito;
+    digito = numero % 10;
     numero = numero / 10;
+    s += digito;
     }
+    return s;
 }
 
 int main ()
@@ -17,6 +18,14 @@ int main ()
     int numero;
     cout << "Ingrese un numero del que desea saber la suma de sus cifras" << endl;
     cin >> numero;
+    if (numero <= 0)
+    {
+        cout << "El numero ingresado debe ser positivo" << endl;
+        return 0;
+    }
+    
+    int r = cifras(numero);
+    cout << r;
 
     return 0;
 }

@@ -21,7 +21,6 @@ double operacion (char operador, double caracter1, double caracter2)
         }
         return (caracter1 / caracter2);
     }
-
 }
 
 int main()
@@ -47,4 +46,3 @@ int main()
     
     return 0;
 }
-

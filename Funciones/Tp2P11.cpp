@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+string cifras (int numero)
+{
+    int digito, s;
+    while (numero != 0) 
+    {
+    digito = numero % 10;
+    numero = numero / 10;
+    
+    if (digito % 2 != 0)
+    {
+        return "False";
+    }
+    }
+    
+    if (digito % 2 == 0)
+    {
+        return "True";
+    }
+}
+
+int main ()
+{
+    int numero;
+    cout << "Ingrese un numero del que desea saber si es hyperpar" << endl;
+    cin >> numero;
+    string r = cifras(numero);
+    cout << r;
+
+    return 0;
+}

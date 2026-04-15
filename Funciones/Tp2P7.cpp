@@ -10,6 +10,7 @@ string triangular (int numero)
     k++;
     }
 
+
     if (suma == numero) {
          
         return "Triangular";
