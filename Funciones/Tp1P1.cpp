@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;    
 
-double cubo (double ca);
+double cubo (double ca)
+{
+    return ca*ca*ca;
+}
 
 int main ()
 {
@@ -11,9 +14,4 @@ int main ()
     cout << cr << endl;
 
     return 0;
-}
-
-double cubo (double ca)
-{
-    return ca*ca*ca;
 }
