@@ -3,7 +3,7 @@ using namespace std;
 
 string cifras (int numero)
 {
-    int digito, s;
+    int digito;
     while (numero != 0) 
     {
     digito = numero % 10;
