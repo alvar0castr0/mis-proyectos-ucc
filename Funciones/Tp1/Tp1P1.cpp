@@ -1,3 +1,4 @@
+// 1) Escribir una función que permita calcular el cubo de un número con punto decimal.
 #include <iostream>
 using namespace std;    
 

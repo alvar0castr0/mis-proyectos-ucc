@@ -1,3 +1,8 @@
+// 12). Realizar un programa que simule un juego de dados con las siguientes reglas: El jugador tira dos dados. Cada dato tiene seis caras. Las caras contienen 1, 2, 3, 4, 5 y 6 untos
+// Una vez que los dados se hayan detenido, se calcula la suma de los puntos en las dos caras superiores.
+// - Si la suma es 7 u 11, el jugador gana y acaba el juego
+// - Si la suma es 2, 3 o 12 el jugador pierde y acaba el juego
+// - Si la suma es 4, 5, 6, 8, 9 ó 10 se repite la jugada hasta que gane o pierda
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

@@ -1,3 +1,5 @@
+// 2) Escriba una función que tenga un argumento de tipo entero, y que devuelva la letra P, si es positivo, N si es negativo y C si es cero.
+
 #include <iostream>
 using namespace std;
 

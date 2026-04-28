@@ -1,3 +1,5 @@
+// 10). Escribir un programa que sume las cifras de un número entero positivo.
+
 #include <iostream>
 using namespace std;
 

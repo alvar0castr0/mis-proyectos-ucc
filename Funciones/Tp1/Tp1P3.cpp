@@ -1,3 +1,4 @@
+// 3) Escribir una función que permita determinar el menor de dos números.
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,7 @@
+// 5) Escribir una función que calcule el monto a pagar en una compra. Los parámetros a recibir son los siguientes:
+// Cantidad
+// Precio
+// Porcentaje de descuento
 #include <iostream>
 using namespace std;
 

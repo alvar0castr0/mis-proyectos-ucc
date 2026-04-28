@@ -1,3 +1,11 @@
+//2) Escribir una función que permita dibujar un cuadrado de lado N en pantalla.
+//* * * * * *
+//*         *
+//*         *
+//*         *
+//*         *
+//* * * * * *
+
 #include <iostream>
 using namespace std;
 

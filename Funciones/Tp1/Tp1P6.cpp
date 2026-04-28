@@ -1,3 +1,9 @@
+// 6) Escribir una función que permita realizar una operación matemática entre dos números.
+// La función debe recibir como parámetros:
+// Operando 1
+// Operando 2
+// Operación (+, -, *, /)
+
 #include <iostream>
 using namespace std;
 

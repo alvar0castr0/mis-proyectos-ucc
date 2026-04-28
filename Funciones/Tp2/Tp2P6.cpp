@@ -1,3 +1,4 @@
+// 6). Dada una medida de tiempo expresada en horas, minutos y segundos con valores arbitrarios, obtenga un programa que transforme dicha medida en una expresión correcta. Por ejemplo, dada la medida 3h 118m 195s, el programa deberá obtener como resultado 5h 1m 15s
 #include <iostream>
 using namespace std;
 

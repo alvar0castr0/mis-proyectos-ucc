@@ -1,3 +1,5 @@
+// 7) Escribir una función que permita determinar la condición si un alumno en su materia.Debe ingresar como datos las dos notas de parciales y la asistencia de un alumno.
+
 #include <iostream>
 using namespace std;
 

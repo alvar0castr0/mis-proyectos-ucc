@@ -1,24 +1,34 @@
-#include <iostream> 5
+// 3) Repetir el ejercicio anterior, considerando que la figura a dibujar es un rectángulo.
+#include <iostream>
 using namespace std;
 
-void grafico (int rectangulo);
+void rectangulo (int lado);
 
 int main ()
 {
-    int rectangulo;
-    cout << "Ingrese la altura de su grafico" << endl;
-    cin >> rectangulo;
-    grafico (rectangulo);
+    int lado;
+    cout << "Ingrese el lado del rectangulo" << endl; 
+    cin >> lado;
+    rectangulo (lado);
     return 0;
 }
 
-void grafico (int rectangulo)
+void rectangulo (int lado)
 {
-    for (int i = 1; i <= rectangulo; i++)
+    for (int i = 0; i < lado+2; i++)
     {
-        for (int k = 0; k < i; k++){
-            cout << "*";
-        }
-        cout << endl;
+        cout << "*" << " ";
     }
-}
+    cout << endl;
+    
+    for (int l = 0; l < lado/2; l++) {
+        cout << "*"; for (int j = 0; j < lado+5; j++) {cout << " ";}; cout << "*"; cout << endl;
+    }
+    
+    for (int k = 0; k < lado+2; k++)
+    {
+        cout << "*" << " ";;
+    }
+
+
+} 

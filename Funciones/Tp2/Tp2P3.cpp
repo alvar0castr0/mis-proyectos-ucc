@@ -1,3 +1,5 @@
+// 3) La función debe recibir como parámetro 2 números, y debe devolver como resultado el mayor de ellos.
+
 #include <iostream>
 using namespace std;
 

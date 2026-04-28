@@ -1,3 +1,4 @@
+//2) Escribir una función que calcule la cantidad de veces que un número está contenido en otro.
 #include <iostream>
 using namespace std;
 

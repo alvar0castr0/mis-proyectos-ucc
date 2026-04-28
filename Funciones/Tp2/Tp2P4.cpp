@@ -1,3 +1,4 @@
+// 4). Obtener una función que calcule la factorial de un número n.
 #include <iostream>
 using namespace std; 
 

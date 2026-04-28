@@ -1,3 +1,4 @@
+// 8). Desarrollar un programa en el cual introduzca un número entero positivo e invierta los dígitos del número. Mostrar en pantalla el número invertido.
 #include <iostream>
 using namespace std;
 

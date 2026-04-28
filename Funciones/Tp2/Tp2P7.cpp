@@ -1,3 +1,7 @@
+// 7). Obtener un programa que lea un número natural y diga si es o no es triangular.
+// A saber: un número N es triangular si, y solamente si, es la suma de los primeros M números
+// naturales, para algún valor de M.
+// Ejemplo: 6 es triangular pues 6 = 1 + 2 + 3.
 #include <iostream>
 using namespace std;
 

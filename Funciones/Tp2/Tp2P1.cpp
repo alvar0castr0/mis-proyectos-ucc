@@ -1,3 +1,5 @@
+// 1) Escriba una función que reciba como parámetros 2 números, y retorne la suma de ambos.
+
 #include <iostream>
 using namespace std;
 

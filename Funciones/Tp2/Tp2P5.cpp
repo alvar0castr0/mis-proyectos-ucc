@@ -1,3 +1,4 @@
+// 5). elabore un programa que lea las edades y los nombres de dos mujeres que son familiares, e implemente una función que devuelva el nombre de la madre.
 #include <iostream>
 using namespace std;
 

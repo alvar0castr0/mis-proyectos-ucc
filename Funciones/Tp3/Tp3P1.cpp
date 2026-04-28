@@ -1,3 +1,9 @@
+// 1) Escribir una función que permita mostrar un mensaje por pantalla con el siguiente formato:
+// *************************************************************
+// Mensaje
+// *************************************************************
+// El mensaje a mostrar debe ser enviado por parámetro a la función 
+
 #include <iostream>
 using namespace std;
 

@@ -1,5 +1,5 @@
-// 3) Repetir el ejercicio anterior considerando, considerando que la figura a dibujar es un rectángulo
-#include <iostream> 5
+// 5) Escribir una función que permita realizar el siguiente gráfico: La función debe aceptar como parámetro la altura del gráfico 
+#include <iostream>
 using namespace std;
 
 void grafico (int rectangulo);
@@ -17,7 +17,7 @@ void grafico (int rectangulo)
 {
     for (int i = 1; i <= rectangulo; i++)
     {
-        for (int k = 0; k < i; k++){
+        for (int k = 0; k < rectangulo - i + 1; k++){
             cout << "*";
         }
         cout << endl;

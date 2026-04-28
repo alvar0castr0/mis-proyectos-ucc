@@ -1,3 +1,4 @@
+// 11). Se dice que un número es hyperpar cuando todos sus dígitos son pares. Obtener una función que retorne True si el número pasado como parámetro es hyperpar o False en caso contrar
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,4 @@
+// 9). Solicitar al usuario un valor entero y decir si es capicúa
 #include <iostream>
 using namespace std;
 
