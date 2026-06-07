@@ -5,6 +5,9 @@
   Contiene:
     [1] Indice de actividades (que hace cada una)
     [2] Indice de elementos (en que actividades aparece cada concepto)
+    [3] SINTAXIS RAPIDA - ESQUELETOS DE CODIGO
+    [4] ERRORES COMUNES A EVITAR
+    [5] DIFERENCIAS CLAVE
 ================================================================================
 
 
