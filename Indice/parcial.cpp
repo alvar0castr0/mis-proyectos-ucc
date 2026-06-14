@@ -62,6 +62,7 @@ float calcularPago(Siniestro s)
 void mostrarPorCiudad(Siniestro casos[], int cantidad, string ciudad)
 {
     cout<<"Casos de " << ciudad << endl;
+    bool encontro = false;
 
     for(int i=0; i<cantidad; i++)
     {
@@ -72,10 +73,14 @@ void mostrarPorCiudad(Siniestro casos[], int cantidad, string ciudad)
             cout << "Poliza: " << casos[i].poliza << endl;
             cout << "Costo: " << casos[i].costo << endl;
             cout << "Cobertura: " << casos[i].cobertura << "%" << endl;
-            cout<<"Pago empresa: " << calcularPago(casos[i]) << endl;
+            cout << "Pago empresa: " << calcularPago(casos[i]) << endl;
 
             cout<<"--------------------"<<endl;
         }
+    }
+
+    if (!encontro) {
+        cout << "No se encontraron casos para la ciudad especificada (Respeta mayusculas y sin acentos.)" << endl;
     }
 }
 
@@ -116,14 +121,13 @@ void contarCiudad(Siniestro casos[], int cantidad)
 // Mostrar errores
 void mostrarErrores(Siniestro casos[], int cantidad)
 {
-    cout<<"Casos con errores:"<<endl;
+    cout << "Casos con errores:" << endl;
 
-    for(int i=0;i<cantidad;i++)
+    for(int i = 0; i<cantidad; i++)
     {
         if(casos[i].costo <= 0 || casos[i].cobertura <= 0 || casos[i].ciudad == "-")
         {
-            cout<<"Caso: "
-            <<casos[i].numeroCaso<<endl;
+            cout<<"Caso: " << casos[i].numeroCaso<<endl;
         }
     }
 }
@@ -218,45 +222,41 @@ int main()
         cin >> opcion;
 
         if (opcion >= 1 && opcion <= 6){
-            cout<<"Opcion incorrecta"<<endl;
         
             switch(opcion)
             {
-            case 1:
-            {
-            string ciudad;
+                case 1:
+                {
+                    string ciudad;
 
-            cout<<"Ingrese ciudad: ";
-            cin>>ciudad;
-
-
-            mostrarPorCiudad(casos,cantidad,ciudad);
-
-            break;
-            }
+                    cout << "Ingrese ciudad: ";
+                    cin >> ciudad;
+                    mostrarPorCiudad(casos,cantidad,ciudad);
+                    break;
+                }
             
-            case 2:
-                contarCiudad(casos,cantidad);
-                break;
+                case 2:
+                    contarCiudad(casos,cantidad);
+                    break;
              
-            case 3:
-                mostrarErrores(casos,cantidad);
-                break;
+                case 3:
+                    mostrarErrores(casos,cantidad);
+                    break;
             
-            case 4:
-                generarLiquidacion(casos,cantidad);
-                break;
+                case 4:
+                    generarLiquidacion(casos,cantidad);
+                    break;
 
-            case 5:
-                generarErrores(casos,cantidad);
-                break;
+                case 5:
+                    generarErrores(casos,cantidad);
+                    break;
 
-            case 6:
-                cout<<"Fin del programa"<<endl;
-                break; 
+                case 6:
+                    cout<<"Fin del programa"<<endl;
+                    break; 
+                }
 
-            }
-        } else {
+        }  else {
             cout << "Opcion incorrecta" << endl;
         }
 
