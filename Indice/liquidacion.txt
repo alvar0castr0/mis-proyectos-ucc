@@ -1,0 +1,4 @@
+Liquidacion por ciudad
+Cordoba: 6977.8
+Salta: 3410.8
+Mendoza: 18853.1

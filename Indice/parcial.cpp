@@ -13,7 +13,8 @@ struct Siniestro
     string ciudad;
 };
 
-// ===== FUNCIONES =====
+// =============== FUNCIONES ===============
+
 // Carga los datos del archivo
 void cargarArchivo(Siniestro casos[], int &cantidad)
 {
@@ -23,12 +24,13 @@ void cargarArchivo(Siniestro casos[], int &cantidad)
 
     if (!archivo)
     {
-        cout<<"Error al abrir el archivo"<<endl;
-        return;
+        cout << "Error al abrir el archivo" << endl;
+        return; 
     }
 
     string leerencabezado;
 
+    // para saltarnos los encabezados del archivo
     archivo >> leerencabezado; //Numero
     archivo >> leerencabezado; //caso
     archivo >> leerencabezado; //poliza
@@ -39,11 +41,11 @@ void cargarArchivo(Siniestro casos[], int &cantidad)
 
     while(archivo >> casos[cantidad].numeroCaso)
     {
-        archivo >> casos[cantidad].poliza;
-        archivo >> casos[cantidad].costo;
-        archivo >> casos[cantidad].cobertura;
-        archivo >> casos[cantidad].ciudad;
-        cantidad++;
+    archivo >> casos[cantidad].poliza;
+    archivo >> casos[cantidad].costo;
+    archivo >> casos[cantidad].cobertura;
+    archivo >> casos[cantidad].ciudad;
+    cantidad++;
     }
     archivo.close();
 }
@@ -61,26 +63,25 @@ float calcularPago(Siniestro s)
 // Mostrar casos de una ciudad
 void mostrarPorCiudad(Siniestro casos[], int cantidad, string ciudad)
 {
-    cout<<"Casos de " << ciudad << endl;
+    cout << "Casos de " << ciudad << endl;
     bool encontro = false;
 
     for(int i=0; i<cantidad; i++)
     {
         if(casos[i].ciudad == ciudad)
         {
-
+            encontro = true; //nos falto esta condicion
             cout << "Numero Caso: " << casos[i].numeroCaso << endl;
             cout << "Poliza: " << casos[i].poliza << endl;
             cout << "Costo: " << casos[i].costo << endl;
             cout << "Cobertura: " << casos[i].cobertura << "%" << endl;
             cout << "Pago empresa: " << calcularPago(casos[i]) << endl;
-
             cout<<"--------------------"<<endl;
         }
     }
 
     if (!encontro) {
-        cout << "No se encontraron casos para la ciudad especificada (Respeta mayusculas y sin acentos.)" << endl;
+        cout << "No se encontraron casos para la ciudad " << ciudad << " (Respeta mayusculas y sin acentos.)" << endl;
     }
 }
 
@@ -92,7 +93,7 @@ void contarCiudad(Siniestro casos[], int cantidad)
     int salta = 0;
     int mendoza = 0;
 
-
+    
     for(int i=0; i<cantidad; i++)
     {
 
@@ -127,7 +128,7 @@ void mostrarErrores(Siniestro casos[], int cantidad)
     {
         if(casos[i].costo <= 0 || casos[i].cobertura <= 0 || casos[i].ciudad == "-")
         {
-            cout<<"Caso: " << casos[i].numeroCaso<<endl;
+            cout<<"Caso: " << casos[i].numeroCaso << endl;
         }
     }
 }
@@ -140,7 +141,7 @@ void generarLiquidacion(Siniestro casos[], int cantidad)
 
     if (!archivo)
     {
-        cout<<"No se pudo crear archivo"<<endl;
+        cout << "No se pudo crear archivo" << endl;
         return;
     }
 
@@ -190,10 +191,9 @@ void generarErrores(Siniestro casos[], int cantidad)
 
     for(int i = 0; i < cantidad; i++)
     {
-        if (casos[i].costo <= 0 || casos[i].cobertura <= 0 || casos[i].ciudad=="-")
+        if (casos[i].costo <= 0 || casos[i].cobertura <= 0 || casos[i].ciudad == "-")
         {
-            archivo<<"Numero Caso: "
-            <<casos[i].numeroCaso<<endl;
+            archivo << "Numero Caso: " << casos[i].numeroCaso << endl;
         }
     }
 
@@ -221,6 +221,7 @@ int main()
         cout << "Ingrese opcion: ";
         cin >> opcion;
 
+        //si pones una opcion incorrecta, te avisa y vuelve a mostrar el menu
         if (opcion >= 1 && opcion <= 6){
         
             switch(opcion)
