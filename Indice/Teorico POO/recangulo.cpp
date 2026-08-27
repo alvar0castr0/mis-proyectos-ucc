@@ -2,85 +2,62 @@
 using namespace std;
 
 class Rectangulo {
-    private: 
-        int base, altura;
-    public: 
-        Rectangulo (); //Constructor default, la firma del constructor tiene que replicar el nombre de la clase 
-        Rectangulo (int base, int altura); //Especifico los datos, se pueden hacer mas de un constructor
-        void setBase (int base); //Ingreso de datos en el atributo
-        void setAltura (int altura);
-        int getBase (); //Recibo los datos
-        int getAltura ();
-        int perimetro (); //defino el metodo general, que no es un atributo, sino una funcion que devuelve un valor
-        int superficie ();
-    ~Rectangulo () //Destructor, se ejecuta cuando el objeto deja de existir, se puede usar para liberar memoria
-    {
-        //
-    };
-};
+private: 
+    int base, altura;
 
-    //Definicion de los metodos
-    Rectangulo:: Rectangulo ()
-    {
-         base = 0;
+public: 
+    Rectangulo(); 
+    Rectangulo(int base, int altura); 
+    
+    void setBase(int base); 
+    void setAltura(int altura); 
+    
+    // Métodos const porque no modifican el objeto
+    int getBase() const; 
+    int getAltura() const; 
+    int perimetro() const; 
+    int superficie() const; 
+    
+    ~Rectangulo();
+}; 
 
-    altura = 0;
-        }
-        Rectangulo:: Rectangulo (int base, int altura)
-        {
-            this->base = base; //this hace referencia al objeto que invoca el metodo
-            this->altura = altura;
-        }
+// Definición de constructores y destructor
+Rectangulo::Rectangulo() : base(0), altura(0) {}
 
-        void Rectangulo:: setBase (int base)
-
-        {
-            this->base = base; // this porque hace referencia al objeto que invoca el metodo
-        }
-
-        void Rectangulo:: setAltura (int altura)
-
-        {
-            this->altura = altura;
-        }
-
-        int Rectangulo:: getBase () 
-        {
-            return this->base; //return porque devuelve el valor del atributo
-        }
-        int Rectangulo:: getAltura ()
-        {
-            return this->altura;
-        }
-        //Metodo general
-        int Rectangulo:: perimetro ()  {
-            return 2 * base + 2 * altura;
-        }
-        int Rectangulo:: superficie ()
-        {
-            return base * altura;
-        }
+Rectangulo::Rectangulo(int base, int altura) {
+    this->base = base;
+    this->altura = altura;
 }
 
+Rectangulo::~Rectangulo() {}
 
-int main ()
-{
-    Rectangulo R();
+// Setters y Getters
+void Rectangulo::setBase(int base) { this->base = base; }
+void Rectangulo::setAltura(int altura) { this->altura = altura; }
+
+int Rectangulo::getBase() const { return this->base; }
+int Rectangulo::getAltura() const { return this->altura; }
+
+// Métodos de cálculo
+int Rectangulo::perimetro() const { return 2 * base + 2 * altura; }
+int Rectangulo::superficie() const { return base * altura; }
+
+int main() {
+    Rectangulo R;
     Rectangulo X(3, 4);
 
-    cout << R.Superficie();
+    cout << R.superficie() << endl; // Imprime 0
     R.setBase(5);
     R.setAltura(6);
-    cout << R.Superficie();
+    cout << R.superficie() << endl; // Imprime 30
     R.setAltura(3);
-    cout << R.Superficie();
-    cout << X.superficie();
-    /* Para punteros, se hace de la siguiente manera:
-    Rectangulo *R;
-    R = new R(); //Se crea el objeto en memoria dinamica
+    cout << R.superficie() << endl; // Imprime 15
+    cout << X.superficie() << endl; // Imprime 12
 
-    R->superficie();
-    delete R; //Se libera la memoria del objeto
-    */
+    // Uso correcto con memoria dinámica (punteros):
+    Rectangulo *ptrR = new Rectangulo(5, 6);
+    cout << "Superficie dinamica: " << ptrR->superficie() << endl;
+    delete ptrR; // Liberación de memoria
+
     return 0;
 }

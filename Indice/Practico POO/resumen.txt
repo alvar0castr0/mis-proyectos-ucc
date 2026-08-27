@@ -1,0 +1,13 @@
+Capsula: Consiste en ocultar los detalles internos de un objeto para proteger sus datos de modificaciones no autorizadas 
+desde el exterior. Solo permite el acceso o cambio de atributos a través de métodos públicos específicos (como getters y setters).
+
+Herencia: Yo de una clase madre puedo sacar subclases, puedo tener acceso a los atributos y metodos de la clase madre.
+
+Clase: Es el molde o plantilla a partir de la cual se crean los objetos. Define la estructura general: 
+los datos que tendrá (atributos) y las acciones que podrá realizar (métodos).
+
+Abstraccion: Consiste en identificar las características y comportamientos esenciales de un objeto para el sistema,
+ignorando la complejidad y los detalles innecesarios. Muestra qué hace el objeto en lugar de cómo lo hace por dentro.
+
+Polimorfismo: En la cual los objetos responden de manera distinta a la misma instruccion.
+
