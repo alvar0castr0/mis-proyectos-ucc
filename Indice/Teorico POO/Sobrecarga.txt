@@ -1,0 +1,23 @@
+*Operadores*
+-> ermiten realizar acciones. z = x + y
+-> Desarrolla un procedimiento, que toma valores, realiza la Operadores y le da el valor a una variable.
+-> Tiene la flexibilidad de trabajar con todos los tipo de datos, se acomoda a cada uno. 
+-> 
+
+*Sobrecarga* (De operadores o funciones). 
+-> definir dos o más métodos (o funciones) con el mismo nombre dentro de la misma clase, pero con diferentes parámetros.
+-> Permite expresar operaciones d edominio con sintaxis familiar.
+    Complejo a, b: -> a + b
+    Vector v; -> v[3]
+    Matriz; -> m(fila,columna)
+El operador no cambia su significado basico: se define como trabaja sobre un tipo propio.
+Si la operacion no es natural, es preferible un metodo con nombre(suma, resta, producto), osea es mejor no usar la sobrecarga.
+
+- Reglas -
+No se puede crear operadores nuevos, solo se pueden usar los existentes
+
+Operadores unarios
+-> Trabaja con un unico operador. (-a, a++, !a, ~a)
+-> En una funcion miembro, no se revibe un parametor adicional
+-> El objeto sobre el que se aplicac es el operador *this
+
